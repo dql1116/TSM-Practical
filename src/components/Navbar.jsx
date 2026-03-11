@@ -47,10 +47,10 @@ export default function Navbar() {
     <header className="fixed top-4 left-0 right-0 z-50 px-3 sx:px-5 md:px-10">
       <nav
         aria-label="Main navigation"
-        className="relative mx-auto flex w-full items-center justify-between rounded-sm bg-[#313131] px-4 py-2.5 md:px-6 md:py-2.5 lg:py-4"
+        className="relative mx-auto flex w-full items-center justify-between rounded-sm bg-[#2c2b2b] px-4 py-2.5 md:px-6 md:py-2.5 lg:py-4"
       >
         <Image
-          src="/logo/ironpeak-logo.png"
+          src="/logo/ironpeak-logo2.png"
           alt="Logo"
           width={100}
           height={20}

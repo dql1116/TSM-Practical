@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ServicesCard({ img, name, description }) {
   return (
-    <div className="flex w-full max-w-[340px] flex-col gap-5 rounded-sm bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition-all duration-400 hover:shadow-[0_20px_50px_rgba(15,23,42,0.14)] md:max-w-[437.33px] md:gap-6 md:h-[498.46px] md:p-6">
+    <div className="flex w-full max-w-[340px] flex-col gap-5 rounded-sm bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition-all duration-400 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(15,23,42,0.14)] md:max-w-[437.33px] md:gap-6 md:h-[498.46px] md:p-6">
       <div className="relative h-44 md:h-200 w-full overflow-hidden rounded-sm md:h-56">
         <Image
           src={img}

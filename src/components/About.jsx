@@ -1,22 +1,31 @@
-import ActionButton from "./ui/buttons/ctaButton";
 import Image from "next/image";
+import ActionButton from "./ui/buttons/ctaButton";
+import AboutImageGrid from "./ui/aboutImageGrid";
 
 export default function About() {
+  const bulletPoints = [
+    "Licensed and experienced construction professionals",
+    "Residential renovations, additions, and commercial build-outs",
+    "Clear communication and structured project planning",
+    "Quality workmanship built for long-term durability",
+  ];
 
   return (
     <div className="w-full px-6 py-16 md:px-12 lg:px-20 lg:py-25">
-        <section className="mx-auto flex w-full max-w-[1400px] flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20">
+        <section className="relative mx-auto flex w-full max-w-[1400px] flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-10 lg:gap-20">
+            {/* Top-left corner accent */}
+            <span className="pointer-events-none absolute -left-2 -top-2 h-12 w-12 border-l-4 border-t-4 border-brand" />
+
+            {/* Bottom-right corner accent */}
+            <span className="pointer-events-none absolute -bottom-2 -right-2 h-12 w-12 border-b-4 border-r-4 border-brand" />
+                        
             <div className="w-full max-w-[620px] md:w-[44%] md:shrink-0 max-md:flex max-md:justify-center">
-                <Image
-                    src="/images/about-image.jpg"
-                    alt="About Image"
-                    width={620}
-                    height={420}
-                    className="h-auto w-full max-md:w-[75%] max-md:mx-auto rounded-sm object-cover"
-                />
+                <AboutImageGrid/>
             </div>
-            <div className="flex w-full md:w-[56%] md:max-w-none max-w-180 flex-col gap-8 max-md:items-center max-md:text-center lg:gap-15">
-                <div className="flex w-full flex-col gap-5 lg:gap-6">
+
+            {/* Left Column Content */}
+            <div className="flex w-full md:w-[56%] md:max-w-none max-w-180 flex-col gap-10 max-md:items-center max-md:text-center lg:gap-12">
+                <div className="flex w-full flex-col gap-6 lg:gap-7">
                     <div className="flex gap-3 items-center max-md:justify-center">
                         <span className="rounded-full block w-2 h-2 bg-brand"/>
                         <p className="text-[14px] md:text-[16px] text-brandGrey font-semibold">
@@ -27,13 +36,22 @@ export default function About() {
                         Reliable Construction Backed by Experience
                     </h2>
                     <p className="text-brandGrey font-normal text-[16px] md:text-[18px]">
-                        Founded in 2014, IronPeak Construction Group provides full-service construction solutions for homeowners, investors, and small businesses throughout the Bay Area. 
-                        Our team specializes in residential construction, remodeling, and commercial build-outs designed to meet both functional and aesthetic goals.
+                        At IronPeak Construction Group, we deliver dependable residential and small commercial construction services across the Bay Area. 
+                        Since 2014, our team has focused on combining careful planning, skilled craftsmanship, and transparent communication to ensure every project is completed to the highest standards.
                     </p>
-                    <p className="text-brandGrey font-normal text-[16px] md:text-[18px]">
-                        We believe every successful project begins with strong planning and transparent communication. 
-                        From initial consultation to final delivery, IronPeak focuses on dependable timelines, quality workmanship, and a structured process that ensures projects are completed efficiently and professionally.
-                    </p>
+                    <ul className="flex flex-col gap-3 text-brandBlack font-bold text-[16px] md:text-[18px]">
+                        {bulletPoints.map((point) => (
+                            <li key={point} className="flex items-center gap-3 max-md:justify-center">
+                                <Image
+                                    src="/icons/check-point.png"
+                                    alt="Check Point"
+                                    width={16}
+                                    height={16}
+                                />
+                                <span>{point}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
                 <ActionButton
                     label="Discover More"

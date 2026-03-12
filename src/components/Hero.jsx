@@ -14,16 +14,26 @@ export default function Hero() {
                     <h1 className="text-[38px] sm:text-[48px] md:text-[58px] lg:text-[70px] text-white font-bold leading-[1.1] md:leading-[1.2]">
                         Built With Strength And Precision
                     </h1>
-                    <span className="block h-[0.5px] w-full bg-[#686868]" />
-                    <p className="text-[15px] md:text-[17px] lg:text-[18px] text-[#959292]">
+                    <span className="block h-[0.5px] w-full bg-white" />
+                    <p className="text-[15px] md:text-[17px] lg:text-[18px] text-white">
                         Reliable residential and commercial construction built with precision, clear planning, and dependable timelines.
                     </p>
                 </div>
-                <ActionButton
-                    label="Service Request"
-                    className="px-5"
-                    link="/try-free"
-                />
+                <div className="flex gap-10">
+                    <ActionButton
+                        label="Service Request"
+                        className="px-5"
+                        link="/try-free"
+                    />
+                    <div className="flex flex-col gap-2">
+                        <span className="text-[20px] leading-none tracking-[2px] text-[#f5b500]">
+                            ★★★★★
+                        </span>
+                        <p className="text-[14px] md:text-[16px] font-semibold text-white">
+                            2k+ Done Projects
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
